@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}About page{% endblock %}
+
+{% block body %}
+    <div class="container my-5">
+        <h1><span class="text-primary">{{ name }}'s</span> profile</h1>
+        <h2>Lorem ipsum dolor sit amet</h2>
+        <a class="btn btn-success mt-2" href="{{ path('index') }}">Go back to homepage</a>
+    </div>
+{% endblock %}

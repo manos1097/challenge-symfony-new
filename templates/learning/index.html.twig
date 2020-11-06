@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Symfony Challenge{% endblock %}
+
+{% block body %}
+    <div class="container my-5">
+        <h1>Hello, <span class="name text-primary">{{ name }}</span></h1>
+        <h4>In the form below you can enter your name</h4>
+        <form action="{{ path('changeMyName') }}" method="post">
+            <div class="form-group row">
+                <div class="col-md-4">
+                    <label for="name">Name: </label>
+                    <input class="form-control" type="text" name="name" id="name">
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Change name</button>
+            <a class="btn btn-success" href="{{ path('about') }}">About page</a>
+        </form>
+    </div>
+{% endblock %}
